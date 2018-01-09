@@ -1,4 +1,4 @@
-package co.enear.akka.cookbook.actor
+package co.enear.akka.cookbook.actor.basics
 
 import akka.actor.{Actor, ActorLogging}
 

@@ -4,9 +4,9 @@ import java.util.concurrent.TimeUnit
 
 import akka.actor.{ActorRef, ActorSystem, Address, Deploy, Props}
 import akka.remote.RemoteScope
-import co.enear.akka.cookbook.actor.{Pong, PongMessage}
 import akka.pattern.ask
 import akka.util.Timeout
+import co.enear.akka.cookbook.actor.basics.{Pong, PongMessage}
 
 import scala.concurrent.duration._
 import scala.concurrent.{Await, Future}

@@ -1,4 +1,4 @@
-package co.enear.akka.cookbook.actor
+package co.enear.akka.cookbook.actor.basics
 
 import java.util.concurrent.TimeUnit
 
@@ -14,7 +14,7 @@ import scala.concurrent.duration._
   * They do not occupy a thread until they receive a message.
   * They do not occupy the main thread.
   */
-object Basics extends App {
+object BasicsApp extends App {
   /**
     * ActorSystem creates a heavyweight structure for a
     * given application, which handles actors living in n threads.
