@@ -6,6 +6,13 @@ import akka.pattern.BackoffSupervisor
 import scala.concurrent.Await
 import scala.concurrent.duration._
 
+/**
+  * An actor can be killed with stop(), PoisonPill and Kill.
+  * stop() and PoisonPill stop the actor and children when received.
+  * stop() is guaranteed to be put in front of the mailbox.
+  * PoisonPill will be the last message on the mailbox.
+  * Kill makes the actor throw an ActorKilledException to be handled by supervision.
+  */
 object SupervisionApp extends App {
   val system = ActorSystem("supervision")
 
