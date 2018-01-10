@@ -10,14 +10,30 @@ object SupervisionApp extends App {
   val system = ActorSystem("supervision")
 
   val parent = system.actorOf(Props[Papa])
-  parent ! SweetChildOfMine
 
+  /**
+    * Starts two Child and one FavoriteChild.
+    * When PayForTheirStudies is sent, Child will get restarted
+    * through SupervisionStrategy and FavoriteChild termination
+    * will be observed through Terminated.
+    */
+  parent ! MakeChild
+  parent ! MakeChild
+  parent ! SweetChildOfMine // clearly a favorite
+  parent ! PayForTheirStudies
+
+  /**
+    * A BackoffSupervisor spawns two actors, a supervisor and a child.
+    * When the child fails, the supervisor attempts to restart it
+    * after some time as specified below.
+    * Note: nothing is done here with this actor.
+    */
   val backoffSupervisor = BackoffSupervisor.props(
     Props[Papa],
-    "papa",
-    5.seconds,
-    30.seconds,
-    0.5
+    childName = "papa",
+    minBackoff = 5.seconds,
+    maxBackoff = 30.seconds,
+    randomFactor = 0.5
   )
 
   Thread.sleep(5000)
