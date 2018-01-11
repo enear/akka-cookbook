@@ -18,3 +18,7 @@ Small Akka applications which aim to demonstrate parts of the library functional
 1) RemoteApp
 2) application.conf
 
+## co.enear.akka.cookbook.actor.persistence
+1) PersistenceApp
+2) ImPersistent
+x) application.conf
