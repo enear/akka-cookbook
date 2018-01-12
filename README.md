@@ -28,7 +28,7 @@ Small Akka applications which aim to demonstrate parts of the library functional
 ## co.enear.akka.cookbook.persistence
 1) PersistenceApp
 2) ImPersistent
-x) application.conf
+3) application.conf
 
 ## co.enear.akka.cookbook.stream
 1) StreamApp
