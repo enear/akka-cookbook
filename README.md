@@ -14,11 +14,23 @@ Small Akka applications which aim to demonstrate parts of the library functional
 3) Child
 4) FavoriteChild
 
-## co.enear.akka.cookbook.actor.remote
+## co.enear.akka.cookbook.actor.pool
+1) PoolApp
+2) PoolBoy
+
+## co.enear.akka.cookbook.actor.circuitbreaker
+1) CircuitBreakerApp
+
+## co.enear.akka.cookbook.remote
 1) RemoteApp
 2) application.conf
 
-## co.enear.akka.cookbook.actor.persistence
+## co.enear.akka.cookbook.persistence
 1) PersistenceApp
 2) ImPersistent
 x) application.conf
+
+## co.enear.akka.cookbook.stream
+1) StreamApp
+2) HelloSource
+3) HelloSink
